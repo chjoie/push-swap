@@ -16,15 +16,14 @@
 # include <stdlib.h>
 # include <stddef.h>
 # include <unistd.h>
-# include <stdio.h>
 # include <fcntl.h>
 
 # define BUFFER_SIZE 1
 
 typedef struct s_list
 {
-	void			*content;
 	struct s_list	*next;
+	void			*content;
 }					t_list;
 
 void	ft_bzero(void *s, size_t n);
