@@ -52,7 +52,7 @@ void	free_list(t_pile **root)
 	}
 	free(current);
 }
-
+/*
 int	check_duplicate(t_pile **root)
 {
 	t_pile	*copy;
@@ -78,7 +78,7 @@ int	check_duplicate(t_pile **root)
 	//	return (0);
 	return (1);
 }
-
+*/
 int	check_if_sorted(t_pile *root)
 {
 	t_pile	*tmp;
