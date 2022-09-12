@@ -15,8 +15,7 @@
 void	put_value_top_b(t_pile **root, int value)
 {
 	t_pile	*list;
-	int	direction;
-	
+	int		direction;
 
 	direction = 1;
 	list = *root;
@@ -52,7 +51,7 @@ int	get_position(t_pile **root, int number)
 
 int	get_instructions_nb(t_pile **root, int number)
 {
-	t_pile *list;
+	t_pile	*list;
 
 	list = *root;
 	while (list->next)
@@ -60,7 +59,8 @@ int	get_instructions_nb(t_pile **root, int number)
 		if (list->number == number)
 		{
 			if (get_position(root, list->number) >= (stack_count(root) / 2))
-				return ((stack_count(root) - get_position(root, list->number) + 1));
+				return ((stack_count(root) - \
+						get_position(root, list->number) + 1));
 			else
 				return (get_position(root, list->number));
 		}
@@ -69,15 +69,11 @@ int	get_instructions_nb(t_pile **root, int number)
 	return ((stack_count(root) - get_position(root, list->number) + 1));
 }
 
-int	closest_to_top(t_pile **root, int group)
+int	get_value(t_pile **root, int instructions, int value, int group)
 {
-	t_pile	*list;
-	int		instructions;
-	int		value;
+	t_pile		*list;
 
-	instructions = stack_count(root);
 	list = *root;
-	value = list->number;
 	while (list->next)
 	{
 		if (list->group == group)
@@ -104,7 +100,7 @@ int	closest_to_top(t_pile **root, int group)
 void	put_value_top(t_pile **root, int value)
 {
 	t_pile	*list;
-	int	direction;
+	int		direction;
 
 	direction = 1;
 	list = *root;

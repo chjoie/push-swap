@@ -26,10 +26,7 @@ void	my_putstr(char *str)
 void	check_arguments(int c, char **args)
 {
 	if (c <= 1)
-	{
-		print_error();
 		exit(0);
-	}
 	else if (!check_argv(c, args))
 	{
 		print_error();
@@ -40,7 +37,7 @@ void	check_arguments(int c, char **args)
 void	is_already_in(t_pile **root, int x, char **args)
 {
 	t_pile	*list;
-	
+
 	list = *root;
 	while (list->next)
 	{

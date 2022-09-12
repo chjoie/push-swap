@@ -52,15 +52,13 @@ void	free_list(t_pile **root)
 	}
 	free(current);
 }
-/*
+
 int	check_duplicate(t_pile **root)
 {
 	t_pile	*copy;
 	t_pile	*copy2;
 
 	copy = *root;
-	//if (copy->next == NULL)
-	//	return (0);
 	copy2 = copy->next;
 	while (copy->next)
 	{
@@ -74,11 +72,9 @@ int	check_duplicate(t_pile **root)
 			return (0);
 		copy = copy->next;
 	}
-	//if (copy->number == copy2->number)
-	//	return (0);
 	return (1);
 }
-*/
+
 int	check_if_sorted(t_pile *root)
 {
 	t_pile	*tmp;

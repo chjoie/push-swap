@@ -85,8 +85,8 @@ void	sort_to_3(t_pile **root_a)
 void	sort(char **args, t_pile **root_a, t_pile **root_b)
 {
 	int	x;
-	int 	in_group;
-	
+	int	in_group;
+
 	x = get_arg_number(root_a);
 	if (x == 1)
 	{

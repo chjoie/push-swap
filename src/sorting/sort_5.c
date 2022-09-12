@@ -14,9 +14,9 @@
 
 int	get_arg_number(t_pile **root)
 {
-	int	x;
+	int		x;
 	t_pile	*list;
-	
+
 	x = 1;
 	list = *root;
 	while (list->next)

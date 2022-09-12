@@ -46,7 +46,7 @@ int	get_lowest(t_pile **root)
 
 int	get_biggest(t_pile **root)
 {
-	t_pile *list;
+	t_pile	*list;
 
 	list = *root;
 	while (list->next)

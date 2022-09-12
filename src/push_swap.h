@@ -6,7 +6,7 @@
 /*   By: chjoie <chjoie@student.42angouleme.fr      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 14:51:32 by chjoie            #+#    #+#             */
-/*   Updated: 2022/08/17 12:14:27 by chjoie           ###   ########.fr       */
+/*   Updated: 2022/08/29 10:18:14 by chjoie           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 
 typedef struct s_pile
 {
-	struct s_pile	*next;
 	int				number;
 	int				group;
+	struct s_pile	*next;
 }	t_pile;
 
 void		my_putstr(char *str);
@@ -38,6 +38,7 @@ int			word_size(char *str, int size);
 void		free_and_exit(char **args, t_pile **root);
 void		insert_end(t_pile **root, int number);
 void		free_list(t_pile **root);
+int			check_duplicate(t_pile **root);
 int			check_if_sorted(t_pile *root);
 void		free_char_lst(char **args);
 void		swap_a(t_pile **root);
@@ -73,6 +74,7 @@ void		fill_stack_b(t_pile **root_a, t_pile **root_b, t_pile *list_a);
 void		fill_stack_a(t_pile **root_a, t_pile **root_b);
 void		more_than_2(t_pile **root_a, t_pile **root_b, t_pile *list_a);
 void		less_than_2(t_pile **root_a, t_pile **root_b, t_pile *list_a);
+void		sort_a_lot(t_pile **root_a, t_pile **root_b);
 void		is_already_in(t_pile **root, int x, char **args);
 int			get_lowest(t_pile **root);
 int			get_biggest(t_pile **root);
@@ -83,6 +85,7 @@ void		get_group(t_pile **root, int limit);
 void		sort_optimized(t_pile **root_a, t_pile **root_b);
 int			closest_to_top(t_pile **root, int group);
 int			get_instructions_nb(t_pile **root, int number);
+int			get_value(t_pile **root, int instructions, int value, int group);
 int			get_position(t_pile **root, int number);
 int			check_group(t_pile **root, int group);
 void		put_value_top(t_pile **root, int value);

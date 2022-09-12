@@ -33,7 +33,7 @@ int	get_next_int(int x, t_pile **root)
 {
 	int		next;
 	t_pile	*list;
-	
+
 	list = *root;
 	next = get_biggest(root);
 	while (list->next)

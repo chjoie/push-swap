@@ -22,8 +22,8 @@
 
 typedef struct s_list
 {
-	struct s_list	*next;
 	void			*content;
+	struct s_list	*next;
 }					t_list;
 
 void	ft_bzero(void *s, size_t n);

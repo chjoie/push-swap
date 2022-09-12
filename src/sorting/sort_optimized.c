@@ -10,46 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "../push_swap.h"
-/*
-void	fill_stack_a(t_pile **root_a, t_pile **root_b)
+
+int	closest_to_top(t_pile **root, int group)
 {
-	int	big;
-	t_pile	*first_elem;
-	
-	first_elem = *root_b;
-	big = get_biggest(root_b);
-	if (get_position(root_b, big) >= (stack_count(root_b) / 2))
-	{
-		while (first_elem->number < big)
-		{
-			rotate_b(root_b);
-			if (first_elem->next != NULL)
-				first_elem = *root_b;
-			else
-				return ;
-		}
-	}
-	else
-	{
-		while (first_elem->number != big)
-		{
-			reverse_rotate_b(root_b);
-			if (first_elem->next != NULL)
-				first_elem = *root_b;
-			else
-				return ;
-		}
-	}
-	push_a(root_a, root_b);
+	t_pile	*list;
+	int		instructions;
+	int		value;
+
+	instructions = stack_count(root);
+	list = *root;
+	value = list->number;
+	value = get_value(root, instructions, value, group);
+	return (value);
 }
-*/
-/*******         FILL STACK A          ************/
 
 void	sort_optimized(t_pile **root_a, t_pile **root_b)
 {
 	int	group;
 	int	value;
-	
+
 	group = 1;
 	while (stack_count(root_a) > 0)
 	{
@@ -67,5 +46,4 @@ void	sort_optimized(t_pile **root_a, t_pile **root_b)
 		put_value_top_b(root_b, value);
 		push_a(root_a, root_b);
 	}
-
 }
